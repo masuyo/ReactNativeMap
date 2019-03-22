@@ -5,9 +5,20 @@ import UsersMap from './components/UsersMap';
 import FetchLocation from './components/FetchLocation';
 
 export default class App extends React.Component {
+  state = {
+    userLocation: null
+  }
+
   getUserLocationHandler = () => {
     navigator.geolocation.getCurrentPosition(position => {
-      console.log(position);
+      this.setState({
+        userLocation: {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          latitudeDelta: position.coords.latitudeDelta,
+          longitudeDelta: position.coords.longitudeDelta,
+        }
+      })
     }, err => console.log(err));
   }
 
@@ -15,7 +26,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <FetchLocation onGetLocation={this.getUserLocationHandler} />
-        <UsersMap />
+        <UsersMap userLocation={this.state.userLocation}/>
       </View>
     );
   }

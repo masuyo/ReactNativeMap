@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 13530,
-  "expoServerNgrokUrl": "https://7y-wph.anonymous.cryptotraderrn.exp.direct",
-  "packagerNgrokUrl": "https://packager.7y-wph.anonymous.cryptotraderrn.exp.direct",
-  "ngrokPid": 13566
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
